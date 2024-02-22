@@ -9,22 +9,6 @@ const App = () => {
 
   return (
     <>
-      <PreviewLayout
-        title={'flexDirection'}
-        values={['column', 'column-reverse', 'row', 'row-reverse']}
-        SelectValue={flexDirection}
-        setSelectedValue={setflexDirection}>
-        <View style={[ourstyle.box, {backgroundColor: 'powderblue'}]}>
-          <Text style={ourstyle.itemColor}> 1</Text>
-        </View>
-        <View style={[ourstyle.box, {backgroundColor: 'skyblue'}]}>
-          <Text style={ourstyle.itemColor}> 2</Text>
-        </View>
-        <View style={[ourstyle.box, {backgroundColor: 'steelblue'}]}>
-          <Text style={ourstyle.itemColor}> 3</Text>
-        </View>
-      </PreviewLayout>
-
       <Background />
     </>
   );

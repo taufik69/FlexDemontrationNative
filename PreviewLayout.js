@@ -8,12 +8,7 @@ const PreviewLayout = ({
   SelectValue,
   setSelectedValue,
   children,
-  childValue,
-  setjustifyContentState,
-  justifyContentState,
-  childValuetilte,
 }) => {
-  console.log(justifyContentState);
   return (
     <View style={ourstyle.PreviewParent}>
       <Text style={ourstyle.tiltle}>{title ? title : 'Taufik islam'}</Text>
@@ -33,32 +28,8 @@ const PreviewLayout = ({
         ))}
       </View>
 
-      <View style={ourstyle.row}>
-        {childValue.map(item => (
-          <TouchableOpacity
-            style={[
-              ourstyle.button,
-              justifyContentState === item && ourstyle.selectedChild,
-            ]}
-            onPress={() => setjustifyContentState(item)}>
-            <Text
-              style={[
-                ourstyle.touchableButton,
-                justifyContentState === item && ourstyle.selectedChildText,
-              ]}>
-              {item}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
-
       {/* another view for children */}
-      <View
-        style={[
-          ourstyle.container,
-          {[title]: SelectValue},
-          {[childValuetilte]: justifyContentState},
-        ]}>
+      <View style={[ourstyle.container, {[title]: SelectValue}]}>
         {children}
       </View>
     </View>

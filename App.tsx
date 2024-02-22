@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import PreviewLayout from './PreviewLayout';
 import ourstyle from './App.style';
 
@@ -33,6 +33,10 @@ const App = () => {
       <View style={[ourstyle.box, {backgroundColor: 'steelblue'}]}>
         <Text style={ourstyle.itemColor}> 3</Text>
       </View>
+      <Image
+        source={require('./images/p.png')}
+        style={{width: 350, height: 170, resizeMode: 'contain'}}
+      />
     </PreviewLayout>
   );
 };
